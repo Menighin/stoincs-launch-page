@@ -61,6 +61,7 @@ a:hover {
 
 .header .logo {
     flex-grow: 1;
+    flex-basis: 0;
 }
 
 .header .logo img {
@@ -69,14 +70,15 @@ a:hover {
 }
 
 .header .download-container {
-    flex-grow: 3;
+    flex-grow: 2;
     min-width: 500px;
     display: flex;
+    flex-basis: 0;
 }
 
 .header .download-container .download {
     margin: auto;
-    color: #2f1e5a;
+    color: var(--title-color);
 }
 
 .header .download-container .download .button {
@@ -122,15 +124,45 @@ a:hover {
 
 /* About ------------------------------------*/
 .about {
-    background: #ccc;
     min-height: 200px;
     max-width: var(--max-width);
+}
+
+.about > .info-panels {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about > .info-panels .info {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.about > .info-panels .info .icon {
+    font-size: 64px;
+    color: var(--primary-color);
+}
+
+.about > .info-panels .info .title {
+    font-size: 28px;
+    color: var(--title-color);
+}
+
+.about > .info-panels .info .text {
+    font-size: 14px;
+    color: var(--text-color);
+    text-align: justify;
 }
 
 /* Footer ------------------------------------*/
 .footer {
     background: #aaa;
-    min-height: 200px;
+    min-height: 100px;
     max-width: var(--max-width);
 }
 

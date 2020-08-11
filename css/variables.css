@@ -3,5 +3,7 @@ body {
     --primary-color: #9f007e;
     --secondary-color: #590050;
     --terciary-color: #cc00a3;
-    --accent-color: #febd01; 
+    --accent-color: #febd01;
+    --title-color: #2f1e5a;
+    --text-color: #4e3e75;
 }
