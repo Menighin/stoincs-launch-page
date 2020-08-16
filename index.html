@@ -13,26 +13,32 @@
 
 </head>
 <body>
-    <section class="menu centered">
-        <ul>
-            <li><a href="http://www.google.com.br">SOBRE</a></li>
-            <li><a href="http://www.google.com.br">PROBLEMAS</a></li>
-            <li><a href="http://www.github.com/Menighin" target="_blank"><i class="fab fa-github"></i></a></li>
-        </ul>
-    </section>
-    <section class="header centered">
-        <div class="logo">
-            <img src="img/snout.svg" width="250px" />
-        </div>
-        <div class="download-container">
-            <div class="download">
-                <h2>Acompanhe seus investimentos!</h2>
-                <div class="button">
-                    <div class="title">Stoincs v0.0.2</div>
-                    <div class="icon"><i class="fas fa-download"></i></div>
+    <section class="top">
+        <section class="menu centered">
+            <ul>
+                <li><a href="#" onclick="scrollToSection(event, 'about')">SOBRE</a></li>
+                <li><a href="https://github.com/Menighin/porquinho-digital/issues">PROBLEMAS</a></li>
+                <li><a href="https://github.com/Menighin/porquinho-digital" target="_blank"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </section>
+        <section class="header centered">
+            <div class="logo" onclick="toggleSnout()">
+                <img src="img/snout.svg" width="250px" class="snout" />
+                <img src="img/snout-loading.svg" width="250px" class="snout-loading" />
+            </div>
+            <div class="download-container">
+                <div class="download">
+                    <h2>Acompanhe seus investimentos!</h2>
+                    <a href="/" id="download">
+                        <div class="button">
+                            <div class="title"><i id="download-platform" class="fab"></i>Stoincs v0.0.2</div>
+                            <div class="icon"><i class="fas fa-download"></i></div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/Menighin/porquinho-digital/releases" target="_blank"><span>Outras versões</span></a>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
     <section class="showcase">
         <div class="carousel centered">
@@ -42,56 +48,58 @@
             </div>
         </div>
     </section>
-    <section class="about centered">
-        <div class="info-panels">
-            <div class="info">
-                <div class="icon"><i class="fas fa-file-invoice-dollar"></i></div>
-                <div class="title">Negociação de Ativos</div>
-                <div class="text">O Stoincs sincroniza o histórico de compra e venda de ativos com a sua conta do CEI</div>
-            </div>
-            <div class="info">
-                <div class="icon"><i class="fas fa-landmark"></i></div>
-                <div class="title">Tesouro Direto</div>
-                <div class="text">As informações dos seus investimentos em Tesouro Direto são sincronizadas, atualizadas e exibidas em tabelas e gráficos</div>
-            </div>
-            <div class="info">
-                <div class="icon"><i class="fas fa-coins"></i></div>
-                <div class="title">Proventos</div>
-                <div class="text">Os proventos pagos também são sincronizados com o CEI</div>
-            </div>
-            <div class="info">
-                <div class="icon"><i class="fas fa-chart-pie"></i></div>
-                <div class="title">Gráficos</div>
-                <div class="text">Stoincs disponibiliza todas as informações integradas em formas de gráficos, facilitando a análise dos seus investimentos</div>
-            </div>
-            <div class="info">
-                <div class="icon"><i class="fas fa-chart-line"></i></div>
-                <div class="title">Preços em tempo real</div>
-                <div class="text">O Stoincs possui integração com diversas APIs de cotação em tempo real. Basta configurá-las e você consegue acompanhar a evolução dos seus investimentos automaticamente</div>
-            </div>
-            <div class="info">
-                <div class="icon"><i class="fab fa-google-drive"></i></div>
-                <div class="title">Google Drive</div>
-                <div class="text">O Stoincs possui integração com sua conta do Google Drive, para que você possa acompanhar seus investimentos de dispositivos diferentes</div>
-            </div>
-            <div class="info">
-                <div class="icon"><i class="fas fa-user-lock"></i></div>
-                <div class="title">Segurança</div>
-                <div class="text">Os dados baixados pelo Stoncs ficam salvos na sua máquina e não são compartilhados com nenhum terceiro</div>
-            </div>
-            <div class="info">
-                <div class="icon"><i class="fas fa-code"></i></div>
-                <div class="title">Open Source</div>
-                <div class="text">O Stoincs é OpenSource! Visite o GitHub e contribua você também!</div>
+    <section class="about-container">
+        <div class="about centered" id="about">
+            <div class="info-panels">
+                <div class="info">
+                    <div class="icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <div class="title">Negociações de Ativos</div>
+                    <div class="text">O Stoincs sincroniza o histórico de compra e venda de ativos com a sua conta do CEI.</div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fas fa-landmark"></i></div>
+                    <div class="title">Tesouro Direto</div>
+                    <div class="text">As informações dos seus investimentos em Tesouro Direto são sincronizadas, atualizadas e exibidas em tabelas e gráficos.</div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fas fa-coins"></i></div>
+                    <div class="title">Proventos</div>
+                    <div class="text">Os proventos pagos também são sincronizados com o CEI.</div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fas fa-chart-pie"></i></div>
+                    <div class="title">Gráficos</div>
+                    <div class="text">Stoincs disponibiliza todas as informações integradas em formas de gráficos, facilitando a análise dos seus investimentos.</div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="title">Preços em Tempo Real</div>
+                    <div class="text">O Stoincs possui integração com diversas APIs de cotação em tempo real. Basta configurá-las e você consegue acompanhar a evolução dos seus investimentos automaticamente.</div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fab fa-google-drive"></i></div>
+                    <div class="title">Google Drive</div>
+                    <div class="text">O Stoincs possui integração com sua conta do Google Drive, para que você possa acompanhar seus investimentos de diferentes dispositivos.</div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fas fa-user-lock"></i></div>
+                    <div class="title">Segurança</div>
+                    <div class="text">Os dados baixados pelo Stoncs ficam salvos na sua máquina e não são compartilhados com nenhum terceiro.</div>
+                </div>
+                <div class="info">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <div class="title">Open Source</div>
+                    <div class="text">O Stoincs é OpenSource! Visite o GitHub e contribua você também!</div>
+                </div>
             </div>
         </div>
     </section>
-    <section class="footer centered">
-
+    <section class="footer">
+        Stoincs © 2020
     </section>
     
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>
