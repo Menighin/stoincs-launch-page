@@ -209,7 +209,7 @@ a:hover {
 
 /** Response Media queries **/
 
-@media (max-width: 600px) {
+@media only mobile and (max-width: 900px) {
     .header .download-container {
         min-width: 250px;
     }
