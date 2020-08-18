@@ -76,6 +76,7 @@ a:hover {
 .header .logo img {
     margin: auto;
     display: block;
+    width: 250px;
 }
 
 .header .logo .snout-loading {
@@ -137,16 +138,17 @@ a:hover {
 
 /* Showcase ------------------------------------*/
 .showcase {
-    background: #2e222c; /*var(--secondary-color);*/
-    min-height: 500px;
+    background: #2e222c;
 }
 
 .showcase > .carousel {
     max-width: var(--max-width);
     background: #333;
-    min-height: 200px;
 }
 
+.showcase > .carousel .main-carousel .carousel-cell, .showcase > .carousel .main-carousel img {
+    width: 100%;
+}
 
 /* About ------------------------------------*/
 .about {
@@ -203,4 +205,20 @@ a:hover {
     padding: 10px 0;
     font-family: sans-serif;
     font-size: 12px;
+}
+
+/** Response Media queries **/
+
+@media only screen and (max-width: 600px) {
+    .header .download-container {
+        min-width: 250px;
+    }
+
+    .header .download-container .download .button .title, .header .download-container .download .button .icon {
+        font-size: 24px;
+    }
+
+    .header .logo img {
+        width: 150px;
+    }
 }
