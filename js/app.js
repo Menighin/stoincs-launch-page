@@ -58,4 +58,4 @@ const downloadLink = document.getElementById('download');
 downloadLink.href = getOS() === 'Linux' ? linuxDownload : windowsDownload;
 
 const downloadPlatform = document.getElementById('download-platform');
-downloadPlatform.classList.add(getOS() === 'Linux' ? 'fa-linux' : 'fa-windows');
+downloadPlatform.classList.add(getOS() === 'Linux' ? 'fa-ubuntu' : 'fa-windows');
