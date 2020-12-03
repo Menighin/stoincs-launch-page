@@ -28,7 +28,7 @@ var flkty = new Flickity( carousel, {
 
 
 // Configuring download link
-const version = '0.0.7';
+const version = '1.0.0';
 const windowsDownload = `https://github.com/Menighin/stoincs/releases/download/v${version}/Stoincs-Setup-${version}.exe`;
 const linuxDownload = `https://github.com/Menighin/stoincs/releases/download/v${version}/Stoincs-${version}.x86_64.rpm`;
 
